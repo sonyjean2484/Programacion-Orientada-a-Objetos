@@ -34,7 +34,7 @@ class AnalisisClima(ClimaSemana):
 # Programa principal
 if __name__ == "__main__":
     print("--------TEMPERATURA PROMEDIO SEMANAL--------")
-    clima = AnalisisClima()  #Instancia del objeto
+    clima = AnalisisClima()  #Instancia del objeto de la subclase
     clima.ingresar_temperaturas() #uso de los métodos en POO
     clima.calcular_promedio()
     clima.mostrar_maxima_minima()

@@ -25,5 +25,5 @@ def calcular_promedio():
 
 # Programa principal
 print("--------TEMPERATURA PROMEDIO SEMANAL--------")
-ingresar_temperaturas() #uso de funciones en programación tradicioanl
+ingresar_temperaturas() #uso de funciones en programación tradicional
 calcular_promedio()
