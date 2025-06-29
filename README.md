@@ -1,6 +1,9 @@
 # Programacion-Orientada-a-Objetos
 
+Ingeniería en Tecnologías de la Información
+
 Ejercicios de POO en Python
 
-Tecnologías de la Información
 Segundo semestre
+
+2025
