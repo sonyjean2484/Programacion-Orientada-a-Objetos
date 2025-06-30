@@ -13,17 +13,17 @@ def calcular_imc(peso, estatura):
 
 #función para registrar al paciente, utiliza variables de tipo int, float
 def registrar_paciente():
-    nombre = input("Nombre del paciente: ")
+    nombre = input("Nombre del paciente: ") #variable tipo int
     edad = int(input("Edad: "))
     genero = input("Género (M/F): ")
-    estatura = float(input("Estatura en metros (ej. 1.75): "))
+    estatura = float(input("Estatura en metros (ej. 1.75): ")) #variable tipo float
     peso = float(input("Peso en kilogramos: "))
     sintomas = input("Síntomas (separados por comas): ").split(",")
     asegurado = input("¿Está asegurado? (s/n): ").lower() == 's'
 
     imc = calcular_imc(peso, estatura) #índice de masa corporal (imc)
 
-    paciente = {    #creación de un diccionario que almacena los datos del paciente
+    paciente = {    #creación de una variable tipo diccionario que almacena los datos del paciente
         "Nombre": nombre,
         "Edad": edad,
         "Género": genero,
@@ -41,7 +41,7 @@ def guardar_paciente_csv(paciente, archivo="pacientes.csv"):
     existe = os.path.exists(archivo)
 
     with open(archivo, mode="a", newline="", encoding="utf-8") as file:
-        campos = ["Nombre", "Edad", "Género", "Estatura", "Peso", "IMC", "Síntomas", "Asegurado"]
+        campos = ["Nombre", "Edad", "Género", "Estatura", "Peso", "IMC", "Síntomas", "Asegurado"]#variable tipo lista
         escritor = csv.DictWriter(file, fieldnames=campos)
 
         if not existe:
@@ -70,9 +70,9 @@ while True:
     print("1. Registrar nuevo paciente")
     print("2. Ver todos los pacientes")
     print("3. Salir")
-    opcion = input("Seleccione una opción: ")
+    opcion = input("Seleccione una opción: ")#variable tipo string
 
-    if opcion == "1":
+    if opcion == "1": #variable tipo booleano
         paciente = registrar_paciente()
         guardar_paciente_csv(paciente)
     elif opcion == "2":
