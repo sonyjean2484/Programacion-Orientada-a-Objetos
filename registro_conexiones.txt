@@ -4,3 +4,9 @@
  Ana Torres se desconectó a las 15:47:15 
  Luis Pérez se desconectó a las 15:47:17 
  Carla Gómez se desconectó a las 15:47:19 
+ Ana Torres se conectó a las 16:22:59
+ Luis Pérez se conectó a las 16:23:01
+ Carla Gómez se conectó a las 16:23:03
+ Ana Torres se desconectó a las 16:23:13 
+ Luis Pérez se desconectó a las 16:23:15 
+ Carla Gómez se desconectó a las 16:23:17 
