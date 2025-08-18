@@ -14,7 +14,7 @@ class Producto:
         self._cantidad = cantidad
         self._precio = precio
 
-    # Getters
+    # Métodos Getters para acceder a los atributos de la clase Producto
     def get_id(self):
         return self._id
 
@@ -27,7 +27,7 @@ class Producto:
     def get_precio(self):
         return self._precio
 
-    # Setters
+    # Métodos Setters que modifican los atributos
     def set_cantidad(self, nueva_cantidad):
         self._cantidad = nueva_cantidad
 
@@ -37,9 +37,10 @@ class Producto:
     def __str__(self):
         return f" {self._id:<5} {self._nombre:<20} {self._cantidad:<10}{self._precio:<10.2f}"
 
+#Clase Inventario
 class Inventario:
         def __init__(self):
-            self.productos = []
+            self.productos = [] #lista donde se almacenan los productos
 
         def agregar_producto(self, producto):
             if any(p.get_id() == producto.get_id() for p in self.productos):
@@ -49,7 +50,7 @@ class Inventario:
             print("Producto agregado con éxito.")
             return True
 
-        def eliminar_producto(self, id_producto):
+        def eliminar_producto(self, id_producto):# elimina un producto por ID
             producto_encontrado = self.buscar_por_id(id_producto)
             if producto_encontrado:
                 self.productos.remove(producto_encontrado)
@@ -59,6 +60,7 @@ class Inventario:
                 print("Error: Producto no encontrado.")
                 return False
 
+        #Actualiza un producto por ID, modifica cantidad o precio
         def actualizar_producto(self, id_producto, nueva_cantidad=None, nuevo_precio=None):
             producto = self.buscar_por_id(id_producto)
             if producto:
@@ -94,6 +96,7 @@ class Inventario:
                     print(f"{producto.get_id():<5} {producto.get_nombre():<20} {producto.get_cantidad():<10} {producto.get_precio():<10.2f}")
                 print("-" * 50)
 
+#Menú principal
 def mostrar_menu():
         print("\n---------- Sistema de Gestión de Inventario ----------")
         print("1. Agregar producto")
@@ -104,6 +107,7 @@ def mostrar_menu():
         print("6. Salir")
         return input("Elija una opción: ")
 
+#Función principal
 def main():
     inventario = Inventario()
 
